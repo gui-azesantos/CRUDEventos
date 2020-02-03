@@ -1,0 +1,30 @@
+@model CrudBandas.Models.CasaDeShow
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detailhes</h1>
+
+<div>
+    <h4>Casa De Show</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            Endereço
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>
